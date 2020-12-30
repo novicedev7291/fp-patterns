@@ -1,4 +1,4 @@
-package com.example.pattern.partialapplication;
+package com.example.pattern.composition.partialapplication;
 
 import org.junit.jupiter.api.Test;
 
