@@ -13,9 +13,21 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * Represent a function which will consume {@link Percent} and calculate tax.
+ * <br/>
+ * <br/>
+ * Function composition visualization:
+ * <pre>
+ * function from(String fromMonth) {
+ *     return (toMonth, Percent) -> {  // X instance with abstract method calculateTax(String, percent)
+ *         (toMonth) -> {  // to(String toMonth) default method of X instance
+ *             return (percent) -> tax // Sales instance with abstract method calculateTax(percent), which will delegate
+ *             //the calculation to X.calculateTax(string, percent)
+ *         }
  *
- * <p>This interface tries the partial application concept of functional programming, this is
- * not straight forward implementation to understand, so here is the explanation</p>
+ *         //Here actual calculation is happening
+ *     }
+ * }
+ * </pre>
  *
  * @author <a href="kuldeepyadav7291@gmail.com">Kuldeep</a>
  */
