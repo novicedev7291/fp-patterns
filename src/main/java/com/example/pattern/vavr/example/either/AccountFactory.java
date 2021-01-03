@@ -1,4 +1,4 @@
-package com.example.pattern.vavr.example;
+package com.example.pattern.vavr.example.either;
 
 import lombok.NoArgsConstructor;
 
