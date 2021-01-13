@@ -1,4 +1,4 @@
-package com.example.pattern.java.composition;
+package com.example.pattern.java.composition.example.salary;
 
 import org.assertj.core.data.Percentage;
 import org.junit.jupiter.api.Test;

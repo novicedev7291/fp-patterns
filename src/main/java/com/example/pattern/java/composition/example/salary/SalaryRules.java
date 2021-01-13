@@ -1,4 +1,4 @@
-package com.example.pattern.java.composition;
+package com.example.pattern.java.composition.example.salary;
 
 import lombok.NoArgsConstructor;
 

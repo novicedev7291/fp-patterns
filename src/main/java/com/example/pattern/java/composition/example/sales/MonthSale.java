@@ -1,4 +1,4 @@
-package com.example.pattern.java.composition.partialapplication;
+package com.example.pattern.java.composition.example.sales;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

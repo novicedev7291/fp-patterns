@@ -1,4 +1,4 @@
-package com.example.pattern.java.composition.partialapplication;
+package com.example.pattern.java.composition.example.sales;
 
 import java.io.IOException;
 import java.nio.file.Files;

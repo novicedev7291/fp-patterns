@@ -1,4 +1,4 @@
-package com.example.pattern.java.composition;
+package com.example.pattern.java.composition.example.salary;
 
 /**
  * @author <a href="kuldeepyadav7291@gmail.com">Kuldeep</a>

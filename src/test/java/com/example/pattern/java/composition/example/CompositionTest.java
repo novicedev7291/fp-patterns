@@ -1,4 +1,4 @@
-package com.example.pattern.java.composition;
+package com.example.pattern.java.composition.example;
 
 import org.assertj.core.data.Percentage;
 import org.junit.jupiter.api.Test;
@@ -37,6 +37,6 @@ class CompositionTest {
         assertThat(kms).isCloseTo(32.1869d, Percentage.withPercentage(0.001));
 
         final Function<Double, Double> mi2KmsConverter = converter.curry(1.60934d);
-        assertThat(mi2KmsConverter.apply(20d)).isCloseTo(32.1689d, Percentage.withPercentage(0.001));
+        assertThat(mi2KmsConverter.apply(20d)).isCloseTo(32.1869d, Percentage.withPercentage(0.001));
     }
 }

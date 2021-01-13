@@ -1,4 +1,4 @@
-package com.example.pattern.java.composition;
+package com.example.pattern.java.composition.util.function;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;

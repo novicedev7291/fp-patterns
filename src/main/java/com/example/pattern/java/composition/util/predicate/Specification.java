@@ -1,4 +1,4 @@
-package com.example.pattern.java.composition.predicate;
+package com.example.pattern.java.composition.util.predicate;
 
 /**
  * @author <a href="kuldeepyadav7291@gmail.com">Kuldeep</a>

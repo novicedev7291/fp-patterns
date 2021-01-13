@@ -1,4 +1,4 @@
-package com.example.pattern.java.composition.store;
+package com.example.pattern.java.composition.example.store;
 
 import lombok.Value;
 

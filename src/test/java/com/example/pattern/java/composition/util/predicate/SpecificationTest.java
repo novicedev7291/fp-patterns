@@ -1,4 +1,4 @@
-package com.example.pattern.java.composition.predicate;
+package com.example.pattern.java.composition.util.predicate;
 
 import org.junit.jupiter.api.Test;
 
