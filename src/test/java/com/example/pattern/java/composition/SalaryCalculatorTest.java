@@ -28,4 +28,15 @@ class SalaryCalculatorTest {
         assertThat(netSalary).isCloseTo(697.973, Percentage.withPercentage(0.001));
     }
 
+    @Test
+    void shouldCalculateNetSalaryGivenAllowanceBonusTaxWithVersion3() {
+        final Double netSalary = new SalaryCalculator3()
+                .with(SalaryRules::allowance)
+                .with(SalaryRules::bonus)
+                .with(SalaryRules::telephoneAllowance)
+                .with(SalaryRules::tax)
+                .compute(576d);
+        assertThat(netSalary).isCloseTo(697.973, Percentage.withPercentage(0.001));
+    }
+
 }
