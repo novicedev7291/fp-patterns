@@ -12,4 +12,8 @@ public class Money {
         BigDecimal newValue = this.value.add(other.value);
         return new Money(newValue);
     }
+
+    public static Money of(Double value) {
+        return of(BigDecimal.valueOf(value));
+    }
 }

@@ -7,7 +7,8 @@ import com.example.pattern.java.composition.example.order.InsufficientInventory;
 import com.example.pattern.java.composition.example.order.Item;
 import com.example.pattern.java.composition.example.order.OrderStateException;
 import com.example.pattern.java.composition.example.order.inventory.InventoryService;
-import lombok.RequiredArgsConstructor;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
 import java.util.Map;
 import java.util.function.Function;
@@ -20,10 +21,10 @@ import static java.util.stream.Collectors.toMap;
 /**
  * @author <a href="kuldeepyadav7291@gmail.com">Kuldeep</a>
  */
-@RequiredArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 class OrderService {
     public static Function<InventoryService, Try<Order>> allocate(Order order) {
-        return (inventoryService) -> {
+        return inventoryService -> {
             Map<String, Integer> skuQtyMap = order.getItems()
                                                   .stream()
                                                   .collect(
