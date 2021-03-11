@@ -19,4 +19,12 @@ public class Delivery {
                                                 .collect(toList());
         return Delivery.of(order.getCustomer(), deliveryItems);
     }
+
+    public static Delivery of(com.example.pattern.java.composition.example.order.v2.Order order) {
+        List<DeliveryItem> deliveryItems = order.getItems()
+                                                .stream()
+                                                .map(item -> DeliveryItem.of(item.getCode(), item.getQty()))
+                                                .collect(toList());
+        return Delivery.of(order.getCustomer(), deliveryItems);
+    }
 }
