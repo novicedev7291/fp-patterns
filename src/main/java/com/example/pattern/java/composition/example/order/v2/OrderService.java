@@ -32,7 +32,7 @@ class OrderService {
                                                   );
 
             if (!inventoryService.allocateItems(skuQtyMap))
-                throw new InsufficientInventory("Inventory is not sufficient for the order");
+                return new Failure<>(new InsufficientInventory("Inventory is not sufficient for the order"));
             if (order.getState() != CONFIRMED)
                 return new Failure<>(new OrderStateException("Only confirmed order can be allocated"));
             return Success.of(order.copy(ALLOCATED));
