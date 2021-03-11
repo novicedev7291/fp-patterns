@@ -4,15 +4,14 @@ import com.example.pattern.java.composition.example.order.Customer;
 import com.example.pattern.java.composition.example.order.Delivery;
 import com.example.pattern.java.composition.example.order.InsufficientInventory;
 import com.example.pattern.java.composition.example.order.Item;
-import com.example.pattern.java.composition.example.order.Order;
 import com.example.pattern.java.composition.example.order.inventory.InventoryService;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 import java.util.Map;
 
-import static com.example.pattern.java.composition.example.order.Order.allocate;
-import static com.example.pattern.java.composition.example.order.Order.moveForShipping;
+import static com.example.pattern.java.composition.example.order.v1.Order.allocate;
+import static com.example.pattern.java.composition.example.order.v1.Order.moveForShipping;
 import static java.util.stream.Collectors.toMap;
 
 @RequiredArgsConstructor

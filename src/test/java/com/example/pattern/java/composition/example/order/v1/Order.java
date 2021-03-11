@@ -1,6 +1,11 @@
-package com.example.pattern.java.composition.example.order;
+package com.example.pattern.java.composition.example.order.v1;
 
 import com.example.pattern.core.Money;
+import com.example.pattern.java.composition.example.order.Customer;
+import com.example.pattern.java.composition.example.order.Item;
+import com.example.pattern.java.composition.example.order.OrderId;
+import com.example.pattern.java.composition.example.order.OrderState;
+import com.example.pattern.java.composition.example.order.OrderStateException;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

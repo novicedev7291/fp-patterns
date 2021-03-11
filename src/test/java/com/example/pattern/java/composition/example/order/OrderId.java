@@ -5,7 +5,7 @@ import lombok.Value;
 import java.util.UUID;
 
 @Value(staticConstructor = "of")
-class OrderId {
+public class OrderId {
     String value;
 
     public static OrderId random() {

@@ -1,5 +1,6 @@
 package com.example.pattern.java.composition.example.order;
 
+import com.example.pattern.java.composition.example.order.v1.Order;
 import lombok.Value;
 
 import java.util.List;
