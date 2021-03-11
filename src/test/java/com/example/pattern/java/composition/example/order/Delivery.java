@@ -1,0 +1,21 @@
+package com.example.pattern.java.composition.example.order;
+
+import lombok.Value;
+
+import java.util.List;
+
+import static java.util.stream.Collectors.toList;
+
+@Value(staticConstructor = "of")
+public class Delivery {
+    Customer customer;
+    List<DeliveryItem> items;
+
+    public static Delivery of(Order order) {
+        List<DeliveryItem> deliveryItems = order.getItems()
+                                                .stream()
+                                                .map(item -> DeliveryItem.of(item.getCode(), item.getQty()))
+                                                .collect(toList());
+        return Delivery.of(order.getCustomer(), deliveryItems);
+    }
+}
