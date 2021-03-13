@@ -39,6 +39,10 @@ class OrderService {
         };
     }
 
+    public static Function<InventoryService, Try<Order>> somethingElse(Order order) {
+        return inventoryService -> Success.of(order);
+    }
+
     public static Try<Order> moveForShipping(Order order) {
         if(order.getState() != ALLOCATED)
             new Failure<>(new OrderStateException("Only allocated order can be moved to ready to ship"));
