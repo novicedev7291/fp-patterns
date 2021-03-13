@@ -12,8 +12,8 @@ public class TryReader<R, S> {
         this.fn = fn;
     }
 
-    public <T> TryReader<R, T> flatMap(Function<S, Try<T>> f) {
-        return new TryReader<>((R r) -> apply(r).flatMap(f));
+    public <T> TryReader<R, T> flatMap(Function<S, TryReader<R, T>> f) {
+        return new TryReader<>((R r) -> apply(r).flatMap(s -> f.apply(s).apply(r)));
     }
 
     public <T> TryReader<R, T> map(Function<S, T> fn) {

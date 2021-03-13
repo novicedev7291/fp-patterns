@@ -1,6 +1,7 @@
 package com.example.pattern.java.composition.example.order.v3;
 
 import com.example.pattern.core.Money;
+import com.example.pattern.core.Try;
 import com.example.pattern.core.TryReader;
 import com.example.pattern.java.composition.example.order.Address;
 import com.example.pattern.java.composition.example.order.City;
@@ -45,7 +46,9 @@ void shouldMoveConfirmedOrderToReadyToShip() {
 
     //When
     TryReader<InventoryService, Order> tryReader =
-            allocate(order).flatMap((Order allocated) -> someThingElse(allocated));
+            allocate(order).flatMap(allocated -> someThingElse(allocated));
+
+    Try<Order> possiblyProcessed = tryReader.apply(new MockInventoryService());
 }
 
     static class MockInventoryService implements InventoryService {
