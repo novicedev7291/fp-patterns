@@ -58,5 +58,10 @@ class OrderServiceTest {
         public boolean allocateItems(Map<String, Integer> skuQtyMap) {
             return true;
         }
+
+        @Override
+        public boolean packItems(Map<String, Integer> skuQtyMap) {
+            return false;
+        }
     }
 }

@@ -4,4 +4,6 @@ import java.util.Map;
 
 public interface InventoryService {
     boolean allocateItems(Map<String, Integer> skuQtyMap);
+
+    boolean packItems(Map<String, Integer> skuQtyMap);
 }
