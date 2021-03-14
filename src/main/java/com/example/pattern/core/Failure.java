@@ -31,4 +31,8 @@ public class Failure<A> implements Try<A> {
     public A get() {
         return null;
     }
+
+    public Object getError() {
+        return this.error;
+    }
 }
